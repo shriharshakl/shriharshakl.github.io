@@ -21,6 +21,19 @@
     position: absolute;
     top: 10px;
     right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.scene-title .github {
+    background-image: url(/images/github.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
 }
 
 .description h4 {
