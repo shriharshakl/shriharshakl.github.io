@@ -1,0 +1,13 @@
+.annotation-group {
+    stroke: #805AD5;
+    color: #805AD5;
+    fill: #805AD5;
+}
+
+.annotation-note-content {
+    stroke: none;
+}
+
+.annotation-subject .subject {
+    stroke-width: 3px;
+}

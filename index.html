@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="favicon.png" type="image/png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="./css/main.css" />
+        <link rel="stylesheet" href="./css/scene.css" />
+        <link rel="stylesheet" href="./css/charts.css" />
+        <link rel="stylesheet" href="./css/annotations.css" />
+        <title>Analysis of cardiovascular & other diseases</title>
+    </head>
+    <body>
+        <template id="legend-template">
+            <div class="flex-horizontal items-center">
+                <div class="circle"></div>
+                <span></span>
+            </div>
+        </template>
+        <template id="disease-filter-template">
+            <fieldset class="flex-horizontal items-center gap-16">
+                <legend>Filter</legend>
+                <div>
+                    <label class="flex-horizontal items-center" for="filter-heart-disease">
+                        <input name="Heart_Disease" type="checkbox" id="filter-heart-disease" />
+                        <span>Heart disease</span>
+                    </label>
+                    <label class="flex-horizontal items-center" for="filter-skin-cancer">
+                        <input name="Skin_Cancer" type="checkbox" id="filter-skin-cancer" />
+                        <span>Skin cancer</span>
+                    </label>
+                    <label class="flex-horizontal items-center" for="filter-other-cancer">
+                        <input name="Other_Cancer" type="checkbox" id="filter-other-cancer" />
+                        <span>Other cancer</span>
+                    </label>
+                </div>
+                <div>
+                    <label class="flex-horizontal items-center" for="filter-depression">
+                        <input name="Depression" type="checkbox" id="filter-depression" />
+                        <span>Depression</span>
+                    </label>
+                    <label class="flex-horizontal items-center" for="filter-diabetes">
+                        <input name="Diabetes" type="checkbox" checked id="filter-diabetes" />
+                        <span>Diabetes</span>
+                    </label>
+                    <label class="flex-horizontal items-center" for="filter-arthritis">
+                        <input name="Arthritis" type="checkbox" id="filter-arthritis" />
+                        <span>Arthritis</span>
+                    </label>
+                </div>
+            </fieldset>
+        </template>
+
+        <section id="scene-0" class="hero">
+            <div class="page-content scene">
+                <div class="scene-title">Intro</div>
+                <div class="hero-image"></div>
+                <h1>Analysis of cardiovascular & other diseases</h1>
+                <h3>
+                    This is a visualization of how factors like age, weight and exercise could influence a person's
+                    ardiovascular and general health. These visualizations are powered by the
+                    <a href="https://www.kaggle.com/datasets/alphiree/cardiovascular-diseases-risk-prediction-dataset"
+                        >Cardiovascular Diseases Risk Prediction Dataset</a
+                    >
+                    available on kaggle.
+                </h3>
+            </div>
+        </section>
+        <main class="page-content">
+            <div id="container">
+                <div id="tooltip" class="tooltip hidden"></div>
+                <div id="scene-1" class="scene">
+                    <div class="scene-title">Scene 1</div>
+                    <div class="description">
+                        <h4></h4>
+                        <p></p>
+                    </div>
+                    <div class="chart" id="age-cvd">
+                        <svg id="age-cvd-svg"></svg>
+                    </div>
+                </div>
+                <hr />
+
+                <div id="scene-2" class="scene">
+                    <div class="scene-title">Scene 2</div>
+                    <div class="description">
+                        <h4></h4>
+                        <p></p>
+                    </div>
+                    <div class="flex-horizontal chart" id="exercise-health">
+                        <svg id="exercise-health-svg"></svg>
+                        <div class="legend"></div>
+                    </div>
+                </div>
+                <hr />
+
+                <div id="scene-3" class="scene">
+                    <div class="scene-title">Scene 3</div>
+                    <div class="description">
+                        <h4></h4>
+                        <p></p>
+                    </div>
+                    <div
+                        id="weight-diseases-annotation-relative"
+                        class="flex-horizontal items-stretch contents-space-between"
+                    >
+                        <div class="chart" id="weight">
+                            <svg id="weight-svg"></svg>
+                        </div>
+                        <div class="chart-small flex-vertical contents-space-around" id="weight-diseases">
+                            <div id="weight-diseases-filter" class="flex-horizontal items-center gap-16"></div>
+                            <div class="legend"></div>
+                            <svg id="weight-diseases-svg"></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"
+        integrity="sha512-M7nHCiNUOwFt6Us3r8alutZLm9qMt4s9951uo8jqO4UwJ1hziseL6O3ndFyigx6+LREfZqnhHxYjKRJ8ZQ69DQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.min.js"
+        integrity="sha512-iBAeBWWWFb8HqSBcrqcz98iIpuVH1la39dEYHtyQ/pGpeCQTQVvLJOWAuhv2Q7JSHp9k7hWA7sGxU3hHJe+tFg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="./js/main.js"></script>
+</html>

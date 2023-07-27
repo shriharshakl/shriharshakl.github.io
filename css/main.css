@@ -1,0 +1,100 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+input[type="checkbox"] {
+    margin: 0;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero {
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+    display: flex;
+    align-items: center;
+}
+
+.hero .hero-image {
+    background-image: url(/images/chart.svg);
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #dacce936;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 16px;
+}
+
+.hero h3 {
+    font-size: 22px;
+    color: rgba(33, 37, 41, 0.75);
+}
+
+.page-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 0 10px;
+}
+
+.flex-horizontal {
+    display: flex;
+    gap: 8px;
+}
+
+.gap-16 {
+    gap: 16px;
+}
+
+.flex-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-stretch {
+    align-items: stretch;
+}
+
+.contents-space-between {
+    justify-content: space-between;
+}
+
+.contents-space-around {
+    justify-content: space-around;
+}

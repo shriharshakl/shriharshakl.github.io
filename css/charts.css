@@ -1,0 +1,122 @@
+:root {
+    --color-1: rgb(15, 131, 171);
+    --color-1-unfocus: rgb(134, 208, 233);
+    --color-1-highlight: rgb(17, 85, 107);
+    --color-2: rgb(250, 164, 58);
+    --color-2-highlight: rgb(112, 67, 11);
+    --color-3: rgb(253, 104, 104);
+    --color-3-highlight: rgb(123, 32, 32);
+    --color-4: rgb(83, 207, 201);
+    --color-4-highlight: rgb(22, 115, 111);
+    --color-5: rgb(162, 217, 37);
+    --color-5-highlight: rgb(88, 117, 21);
+    --color-6: rgb(222, 207, 63);
+    --color-6-highlight: rgb(106, 98, 23);
+
+    --color-tooltip: rgba(39, 41, 53, 0.8);
+}
+
+.chart svg {
+    min-width: 640px;
+    min-height: 400px;
+}
+
+.col1 {
+    fill: var(--color-1);
+    background: var(--color-1);
+}
+.col1.highlight {
+    stroke: var(--color-1-highlight);
+    stroke-width: 3px;
+}
+.col1.unfocus {
+    fill: var(--color-1-unfocus);
+}
+
+.col2 {
+    fill: var(--color-2);
+    background: var(--color-2);
+}
+.col2.highlight {
+    stroke: var(--color-2-highlight);
+    stroke-width: 3px;
+}
+
+.col3 {
+    fill: var(--color-3);
+    background: var(--color-3);
+}
+.col3.highlight {
+    stroke: var(--color-3-highlight);
+    stroke-width: 3px;
+}
+
+.col4 {
+    fill: var(--color-4);
+    background: var(--color-4);
+}
+.col4.highlight {
+    stroke: var(--color-4-highlight);
+    stroke-width: 3px;
+}
+
+.col5 {
+    fill: var(--color-5);
+    background: var(--color-5);
+}
+.col5.highlight {
+    stroke: var(--color-5-highlight);
+    stroke-width: 3px;
+}
+
+.col6 {
+    fill: var(--color-6);
+    background: var(--color-6);
+}
+.col6.highlight {
+    stroke: var(--color-6-highlight);
+    stroke-width: 3px;
+}
+
+.axis {
+    font-size: 12px;
+    font-family: inherit;
+}
+
+.axis.label {
+    font-weight: 500;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.tooltip {
+    position: fixed;
+    border-radius: 4px;
+    padding: 5px;
+    color: white;
+    background-color: var(--color-tooltip);
+    z-index: 1;
+}
+
+.tooltip.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+#exercise-checkup-health-filter {
+    font-size: 14px;
+}
+
+#weight-diseases-annotation-relative {
+    position: relative;
+}
+
+#weight-diseases-annotation {
+    position: absolute;
+    left: 50%;
+    top: 0;
+}

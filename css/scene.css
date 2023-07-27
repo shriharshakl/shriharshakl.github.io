@@ -1,0 +1,33 @@
+:root {
+    --scene-switcher-size: 40px;
+    --scene-switcher-bg: #f0f1f3;
+}
+
+.scene {
+    height: 100vh;
+    padding: 15px 0;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    scroll-snap-align: center;
+    position: relative;
+}
+
+.scene .scene-title {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.description h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.description p {
+    margin-bottom: 15px;
+}
