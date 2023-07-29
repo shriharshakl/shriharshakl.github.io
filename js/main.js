@@ -56,3 +56,12 @@ function handleUnselect() {
 }
 
 /* ************************************************************ */
+
+document.querySelectorAll('.scene-control-button').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const prev = btn.getAttribute('data-prev');
+        const next = btn.getAttribute('data-next');
+
+        document.querySelector(prev ?? next).scrollIntoView({ behavior: 'smooth' });
+    });
+});
